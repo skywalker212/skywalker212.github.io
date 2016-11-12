@@ -44,7 +44,8 @@ li a:hover {
 }
 
 .akash-text {
-    font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    //font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     letter-spacing: .4vw;
     color: black;
     //text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -62,7 +63,8 @@ li a:hover {
 }
 
 .akash-disc {
-    font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    //font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     color: black;
     position: absolute;
     top: 34.5vw;
