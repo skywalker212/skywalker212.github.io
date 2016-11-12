@@ -1,0 +1,72 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    margin-top: -7px;
+    font-family: 'open sans', 'sans-serif';
+    overflow: hidden;
+    position: fixed;
+    background-color: #333
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    background-color: #A9A9A9
+}
+
+.img-text {
+    position: relative;
+}
+
+.akash-text {
+    font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    letter-spacing: .4vw;
+    color: black;
+    //text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    position: absolute;
+    top: 28vw;
+    left: 10vw;
+    font-size: 4.7vw;
+    opacity: 0.8;
+}
+
+.akash-img {
+    width: 100%;
+    height: auto;
+    float: right;
+}
+
+.akash-disc {
+    font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    color: black;
+    position: absolute;
+    top: 34.5vw;
+    left: 21.5vw;
+    font-size: 2vw;
+    opacity: 0.6;
+}
