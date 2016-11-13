@@ -4,50 +4,55 @@ body {
     padding: 0px;
     overflow-x: hidden;
 }
-
 ul {
     list-style-type: none;
     position: fixed;
     left: 0px;
+    z-index: 100;
     right: 0px;
-    margin-top: -7px;
-    font-family: 'open sans', 'sans-serif';
+    margin-top: 0px;
     overflow: hidden;
     position: fixed;
     background-color: #333
 }
-
 li {
+    float: right;
+    top: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.li-home {
     float: left;
 }
-
 li a {
     color: white;
     text-align: center;
     display: block;
-    padding: 14px 16px;
+    padding: 14px 16px 14px 16px;
     text-decoration: none;
 }
-
 li a:hover {
     background-color: #111;
-    text-decoration: none;
-    color: white;
 }
-
 .active {
     background-color: #A9A9A9
 }
-
 .img-text {
     position: relative;
+    width: 100%;
+    height: auto;
 }
-
+.akash-img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
 .akash-text {
-    //font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    //font-family: 'Noto Sans', sans-serif;
     letter-spacing: .4vw;
     color: black;
+    width: 100%;
     //text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     position: absolute;
     top: 28vw;
@@ -55,16 +60,9 @@ li a:hover {
     font-size: 4.7vw;
     opacity: 0.8;
 }
-
-.akash-img {
-    width: 100%;
-    height: auto;
-    float: right;
-}
-
 .akash-disc {
-    //font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', 'Roboto', 'Hammersmith One', sans-serif;
+    //font-family: 'Noto Sans', sans-serif;
     color: black;
     position: absolute;
     top: 34.5vw;
@@ -72,3 +70,37 @@ li a:hover {
     font-size: 2vw;
     opacity: 0.6;
 }
+.about-me {
+    position: relative;
+    width: 100%;
+    font-family: 'Inconsolata', monospace;
+    height: auto;
+}
+.about-text {
+    background-color: rgba(220, 220, 220, 0.6);
+    text-align: center;
+    font-weight: 150;
+    position: absolute;
+    font-size: 4.7vw;
+    margin-top: 4.5vw;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.about-img {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+}
+.about-disc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 3.5vw;
+    margin-top: 20vw;
+    margin-left: 22vw;
+    font-size: 3vw;
+}
+.portfolio {}
+.contact-me {}
