@@ -5,4 +5,4 @@ I'm a begginer level web-developer so some mistakes are going to be there.
 
 If you want to contribute to my website or find some issue then just notify me.
 
-PEACE \_/
+-PEACE-
