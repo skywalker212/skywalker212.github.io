@@ -103,15 +103,18 @@ li a:hover {
     font-size: 3vw;
 }
 .portfolio {
-    position: relative;
     width: 100%;
-    font-family: 'Inconsolata', monospace;
     height: auto;
+    position: relative;
+    font-family: 'Inconsolata', monospace;
+}
+.workmain {
+    //position: relative;
 }
 .work-head {
     color: whitesmoke;
-    background-color: rgba(141, 94, 51, 0.5);
     position: absolute;
+    background-color: rgba(141, 94, 51, 0.5);
     margin-top: 3vw;
     width: 100%;
     top: 0;
@@ -124,23 +127,24 @@ li a:hover {
 .work-img {
     width: 100%;
     height: auto;
-    left: 0;
     top: 0;
+    left: 0;
 }
 .work {
-    height: 50%;
-    width: 100%;
     position: absolute;
-    top: 0;
-    display: block;
-    bottom: 0;
-    margin-top: 9vw;
+    display: inline-block;
+    margin-left: 3vw;
+}
+.work2 {
+    position: absolute;
+    display: inline-block;
     margin-left: 3vw;
 }
 .card {
-    width: 33%;
+    padding: 0 6px;
     float: left;
-    height: 100%;
+    width: 300;
+    height: 200;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -149,6 +153,12 @@ li a:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .card-container {
-    padding: 2px 16px;
+    padding-left: 0.5vw;
+}
+.card-container p {
+    margin-top: -1.5vw;
+}
+.card-img {
+    height: auto;
 }
 .contact-me {}
