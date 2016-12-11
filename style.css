@@ -131,16 +131,13 @@ li a:hover {
     height: 50%;
     width: 100%;
     position: absolute;
-    top: 0;
     display: block;
     bottom: 0;
     margin-top: 9vw;
-    margin-left: 3vw;
 }
 .card {
-    width: 33%;
+    width: 25%;
     float: left;
-    height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.3s;
     transition: 0.3s;
