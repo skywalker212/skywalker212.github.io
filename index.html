@@ -4,19 +4,18 @@
 <head>
     <title>Akash Gajjar's portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+    <!--some useful and useless fonts-->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> </head>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> </head>
 
 <body>
     <div class="main">
         <ul id="nav">
             <li class="li-home"><a href="#img-text">Home</a></li>
-            <li style="margin-right: 2vw"><a href="#">Reach me</a></li>
+            <li style="margin-right: 2vw"><a href="#contactme">Reach me</a></li>
             <li><a href="#workport">My work</a> </li>
             <li><a href="#who-am-i">Who am i?</a></li>
         </ul>
@@ -29,7 +28,7 @@
             <h1 class="about-text">About ME</h1>
             <p class="about-disc">I am a beginner-level web developer and
                 <br> an enthusiastic photographer.
-                <br>I am persuing my ICT degree
+                <br>I am persuing My ICT degree
                 <br> at DAIICT,India.</p>
         </div>
         <div class="portfolio" id="workport"> <img src="workspace.jpg" class="work-img">
@@ -54,31 +53,28 @@
                     </div>
                 </div>
             </div>
-            <div style="clear:both"></div>
-            <div class="work2">
-                <div class="card" id="card4"> <img src="color%20-sample.jpg" class="card-img">
-                    <div class="card-container">
-                        <h4><b>Card 4</b></h4>
-                        <p>Sample Discription</p>
-                    </div>
-                </div>
-                <div class="card" id="card5"> <img src="color%20-sample.jpg" class="card-img">
-                    <div class="card-container">
-                        <h4><b>Card 5</b></h4>
-                        <p>Sample Discription</p>
-                    </div>
-                </div>
-                <div class="card" id="card6"> <img src="color%20-sample.jpg" class="card-img">
-                    <div class="card-container">
-                        <h4><b>Card 6</b></h4>
-                        <p>Sample Discription</p>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div style="clear:both"></div>
-        <div class="contact-me">
-            <p>This site is under construction, please contact akashgajjar8@gmail.com for further details..</p>
+        <div class="contact-me" id="contactme"> <img src="AkashLavitation.jpg" class="contact-img">
+            <h1 class="contact-head">Reach ME</h1>
+            <div class="form-main">
+                <form action="/my-handling-form-page" method="post">
+                    <h3 class="legend">Drop Me a Mail!</h3>
+                    <hr>
+                    <div>
+                        <label for="name">NAME:</label>
+                        <input type="text" id="name" name="user_name" /> </div>
+                    <div>
+                        <label for="mail">E-MAIL:</label>
+                        <input type="email" id="mail" name="user_mail" /> </div>
+                    <div>
+                        <label for="msg">MESSAGE:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Shoot!</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

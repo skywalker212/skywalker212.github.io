@@ -78,10 +78,12 @@ li a:hover {
 }
 .about-text {
     background-color: rgba(220, 220, 220, 0.6);
+    color: dodgerblue;
+    font-family: 'Amatic SC', monospace;
+    letter-spacing: 1vw;
     text-align: center;
-    font-weight: 150;
     position: absolute;
-    font-size: 4.7vw;
+    font-size: 4vw;
     margin-top: 4.5vw;
     width: 100%;
     top: 0;
@@ -103,25 +105,22 @@ li a:hover {
     font-size: 3vw;
 }
 .portfolio {
+    position: relative;
     width: 100%;
     height: auto;
-    position: relative;
-    font-family: 'Inconsolata', monospace;
 }
-.workmain {
-    //position: relative;
-}
+.workmain {}
 .work-head {
     color: whitesmoke;
     position: absolute;
     background-color: rgba(141, 94, 51, 0.5);
+    letter-spacing: 1vw;
     margin-top: 3vw;
     width: 100%;
     top: 0;
     left: 0;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Amatic SC', monospace;
     text-align: center;
-    font-weight: 150;
     font-size: 4vw;
 }
 .work-img {
@@ -131,21 +130,21 @@ li a:hover {
     left: 0;
 }
 .work {
+    width: 100%;
     position: absolute;
+    top: 0;
     display: inline-block;
-    margin-left: 3vw;
-}
-.work2 {
-    position: absolute;
-    display: inline-block;
-    margin-left: 3vw;
+    bottom: 0;
+    margin-top: 15vw;
 }
 .card {
-    padding: 0 6px;
+    width: auto;
     float: left;
-    width: 300;
-    height: 200;
+    margin: 0 8% 0 10%;
+    height: 300;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', monospace;
+    background-color: rgba(88, 89, 95, 0.7);
     -webkit-transition: 0.3s;
     transition: 0.3s;
 }
@@ -153,7 +152,9 @@ li a:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .card-container {
+    color: white;
     padding-left: 0.5vw;
+    height: auto;
 }
 .card-container p {
     margin-top: -1.5vw;
@@ -161,4 +162,80 @@ li a:hover {
 .card-img {
     height: auto;
 }
-.contact-me {}
+.contact-me {
+    position: relative;
+    width: 100%;
+    font-weight: 300;
+    height: auto;
+}
+.contact-img {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+.contact-head {
+    color: whitesmoke;
+    position: absolute;
+    font-family: 'Amatic SC', monospace;
+    background-color: rgba(102, 144, 61, 0.5);
+    letter-spacing: 1vw;
+    color: rgb(185, 255, 77);
+    margin-top: 3vw;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 4vw;
+}
+.form-main {
+    margin-top: 12vw;
+    margin-left: 3vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400;
+    padding: 1em;
+}
+form {
+    font-family: 'Raleway', monospace;
+}
+form div + div {
+    margin-top: 1em;
+}
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+input,
+textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
+.legend {
+    margin-left: 13vw;
+    font-weight: 900;
+}
+textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+}
+hr {
+    margin-bottom: 1vw;
+    margin-left: 95px;
+    margin-top: -0.5vw;
+}
+.button {
+    padding-left: 90px;
+}
+button {
+    margin-left: .5em;
+}
