@@ -220,7 +220,7 @@ textarea:focus {
     border-color: #000;
 }
 .legend {
-    margin-left: 13vw;
+    margin-left: 11vw;
     font-weight: 900;
 }
 textarea {
@@ -238,4 +238,5 @@ hr {
 }
 button {
     margin-left: .5em;
+    font-family: 'Raleway', monospace;
 }
