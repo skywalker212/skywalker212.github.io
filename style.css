@@ -240,3 +240,11 @@ button {
     margin-left: .5em;
     font-family: 'Raleway', monospace;
 }
+.footer {
+    font-family: 'Raleway', monospace;
+}
+.footerp {
+    letter-spacing: 0.5vw;
+    -ms-flex-line-pack: center;
+    text-align: center;
+}
