@@ -1,11 +1,9 @@
-# skywalker212.github.io
-This is one of my projects of FreeCodeCamp.
-This will also serve as my portfolio for the near future.
-I'm a begginer level web-developer so some mistakes are going to be there.
-In the later parts like my work and contact me, the cards and the form is not resized dynamically according to the screen size, I am lazy so I'm not going to fix that problem.
+# skywalker212.github.io  
 
-If you want to contribute to my website or find some issue then just notify me.
+This is my portfolio which is under development right now. So instead of keeping it down, I have decided to make a countdown time which is a kinda timer for when the site will be up and running.  
 
-Drop your review at akashgajjar8@gmail.com
+You can take a look at the working site by clicking [here](https://skywalker212.github.io)  
 
--PEACE-
+Reviews and bugs are welcome at akashgajjar8@gmail.com  
+
+Peace  
