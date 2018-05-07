@@ -1,19 +1,15 @@
-// Select color input
-var color = $('#colorPicker').val();
-console.log(color);
-// Select size input
 var width = $('#inputWidth').val();
 var height = $('#inputHeight').val();
-console.log(width + ' ' + height);
+var color = $('#colorPicker').val();
+var erase = false;
+
 $('#inputWidth').keyup(function(evt) {
   width = $(this).val();
-  console.log(width + ' ' + height);
 });
+
 $('#inputHeight').keyup(function(evt) {
   height = $(this).val();
-  console.log(width + ' ' + height);
 });
-// When size is submitted by the user, call makeGrid()
 
 $('#sizePicker').submit(function(event) {
   event.preventDefault();
@@ -21,8 +17,23 @@ $('#sizePicker').submit(function(event) {
   makeGrid();
 });
 
+$('#colorPicker').change(function() {
+  console.log('color picker changed');
+  if (erase) erase = false;
+  color = $('#colorPicker').val();
+});
+
+function eraser() {
+  if (erase) {
+    erase = false;
+    color = $('#colorPicker').val();
+  } else {
+    erase = true;
+    color = '#ffffff';
+  }
+}
+
 function makeGrid() {
-  // Your code goes here!
   var canvas = $('#pixelCanvas');
   canvas.html('');
   for (var x = 0; x < height; x++) {
@@ -36,8 +47,6 @@ function makeGrid() {
 }
 
 $('#pixelCanvas').on('click', '.btn', function(event) {
-  var color = $('#colorPicker').val();
-  console.log(color);
   var target = $(event.target);
   target.css('background-color', color);
 });

@@ -17,14 +17,15 @@
         <p class='gridpick'>Choose Grid Size: </p>
         <form id="sizePicker">
             Height:
-            <input type="number" id="inputHeight" name="height" min="1" value="1"> Width:
-            <input type="number" id="inputWidth" name="width" min="1" value="1">
+            <input type="number" id="inputHeight" name="height" min="1" value="1" max='100'> Width:
+            <input type="number" id="inputWidth" name="width" min="1" value="1" max='100'>
             <input class="submit-btn" type="submit">
         </form>
     </div>
     <div class="color">
         <p class="colorpick">Pick A Color: </p>
         <input type="color" id="colorPicker">
+        <button onClick='eraser()'>Eraser</button>
     </div>
 
 
