@@ -40,6 +40,15 @@ body {
   border-radius: 0.25rem;
 }
 
+.erase-btn {
+  color: black;
+  background-color: rgb(255, 246, 234);
+  display: inline-block;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
 table,
 tr,
 td {
