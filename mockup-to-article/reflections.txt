@@ -1,0 +1,14 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. Answer the following questions:
+  * What new skills have you learned?
+  * What has been easy?
+  * What has been difficult?
+  * How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+---
+
+Your response goes here!
+I have learned that the strikethrough tag is deprecated and now strike tag is used.
+I have learnedto use super tag to have superscripts.
+I have learned that p tag automatically starts the text in a new line.
+The whole project was easy.
+This project was identical to the previous project except some new tags.
