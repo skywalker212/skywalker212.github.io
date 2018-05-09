@@ -1,7 +1,7 @@
-var width = $('#inputWidth').val();
-var height = $('#inputHeight').val();
-var color = $('#colorPicker').val();
-var erase = false;
+let width = $('#inputWidth').val();
+let height = $('#inputHeight').val();
+let color = $('#colorPicker').val();
+let erase = false;
 
 $('#inputWidth').keyup(function(evt) {
   width = $(this).val();
@@ -34,19 +34,19 @@ function eraser() {
 }
 
 function makeGrid() {
-  var canvas = $('#pixelCanvas');
+  let canvas = $('#pixelCanvas');
   canvas.html('');
-  for (var x = 0; x < height; x++) {
-    var row = $('<tr class="row row' + x + '"></tr>');
+  for (let x = 0; x < height; x++) {
+    let row = $('<tr class="row row' + x + '"></tr>');
     canvas.append(row);
-    for (var y = 0; y < width; y++) {
-      var box = $('<td class="btn btn' + x + y + '"></td>');
+    for (let y = 0; y < width; y++) {
+      let box = $('<td class="btn btn' + x + y + '"></td>');
       row.append(box);
     }
   }
 }
 
 $('#pixelCanvas').on('click', '.btn', function(event) {
-  var target = $(event.target);
+  let target = $(event.target);
   target.css('background-color', color);
 });
