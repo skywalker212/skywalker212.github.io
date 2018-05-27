@@ -1,9 +1,5 @@
 # skywalker212.github.io  
 
-This is my portfolio which is under development right now. So instead of keeping it down, I have decided to make a countdown time which is a kinda timer for when the site will be up and running.  
+My Own Page for displaying my Resume-ish thing with Portfolio, Made lazily since I wanted it to look as minimal as possible.
 
-You can take a look at the working site by clicking [here](https://skywalker212.github.io)  
-
-Reviews and bugs are welcome at akashgajjar8@gmail.com  
-
-Peace  
+You can take a look at the working site by clicking [here](https://skywalker212.github.io)
