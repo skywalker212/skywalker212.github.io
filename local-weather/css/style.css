@@ -1,0 +1,73 @@
+.main-body {
+    font-family: 'Work Sans';
+    color: white;
+    margin-top: 50px;
+}
+
+html{
+    height: 100vh;
+}
+body{
+    background: linear-gradient(-115deg, #44A9C2, #F09DB4);
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Megrim';
+    font-size: 50px;
+    padding: 5px 0 5px 0;
+}
+
+.icon {
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+.cfbutton{
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+.cfbutton:focus{
+  border: none;
+  outline: none;
+}
+
+.weather {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.city {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #EF476F;
+}
+
+.temperature {
+  height: 50px;
+  align-content: center;
+}
+
+.value {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 30px;
+    color: #FEC601;
+}
+
+.status{
+  color: #06D6A0;
+  font-size: 30px;
+}
+
+.weather_status{
+  margin: 10px 0 10px 0;
+}
+
+.disc a{
+  text-decoration: none;
+}
