@@ -1,0 +1,38 @@
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.absolute-center {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+  }
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Special Elite', cursive;
+}
+
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+
