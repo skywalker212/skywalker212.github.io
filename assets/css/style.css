@@ -1,41 +1,27 @@
 body {
-    font-size: 12px;
-    line-height: 1.5;
-    font-family: monospace;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    font-family: 'VT323', monospace;
+    background:black;
+    color: white;
 }
 
-a {
-    color: black;
-}
-
-a:hover {
-    color: blue;
-}
-
-.injjtro h1 {
-    text-transform: uppercase;
-}
-
-a,
-h3,
-p {
-    margin-bottom: 0;
-}
-
-.container {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.wrapper {
-    display: flex;
-    height: 100%;
-    justify-content: space-between;
+.header b {
+    margin-top: 15px;
+}
+
+.ascii-art p {
+    line-height: 1;
+    white-space: pre;
+    margin: 0;
 }
 
 footer {
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
