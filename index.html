@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Akash Gajjar</title>
+    <title>aka.sh</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="ascii-art">
-                <p>       ___       __  ___      ___           _______. __    __      _______      ___            __         __       ___      .______      </p>
-                <p>      /   \     |  |/  /     /   \         /       ||  |  |  |    /  _____|    /   \          |  |       |  |     /   \     |   _  \     </p>
-                <p>     /  ^  \    |  '  /     /  ^  \       |   (----`|  |__|  |   |  |  __     /  ^  \         |  |       |  |    /  ^  \    |  |_)  |    </p>
-                <p>    /  /_\  \   |    &lt;     /  /_\  \       \   \    |   __   |   |  | |_ |   /  /_\  \  .--.  |  | .--.  |  |   /  /_\  \   |      /     </p>
-                <p>   /  _____  \  |  .  \   /  _____  \  .----)   |   |  |  |  |   |  |__| |  /  _____  \ |  `--'  | |  `--'  |  /  _____  \  |  |\  \----.</p>
-                <p>  /__/     \__\ |__|\__\ /__/     \__\ |_______/    |__|  |__|    \______| /__/     \__\ \______/   \______/  /__/     \__\ | _| `._____|</p>
-            </div>
-            <h2>MS in Computer Science at University of Florida</h2>
+    <header>
+        <div id="motd">
+            <p>Welcome to Akash Gajjar's shell</p>
+            <p>To see list of commands run: help</p>
         </div>
-        <footer>
-            <div class="social-icons">
-                <a href="/blog">Blog</a>
-                <a href="https://github.com/skywalker212" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/akashagajjar/" target="_blank">LinkedIn</a>
-                <a href="https://news.ycombinator.com/user?id=skywalker212" target="_blank">Hacker News</a>
-                <a href="/assets/documents/resume.pdf" target="_blank">Résumé</a>
-            </div>
-            <div class="wrapper">
-                <p><b>🚧 WEBSITE UNDER CONSTRUCTION 🚧</b></p>
-            </div>
-        </footer>
+        <p id="last-login">
+            <script>
+                const last_login = localStorage.getItem('last_login');
+                if (last_login) {
+                    document.getElementById('last-login').innerText = last_login;
+                }
+                localStorage.setItem('last_login', `Last Login: ${new Date()} on ${navigator.userAgent}`)
+            </script>
+        </p>
+    </header>
+    <div id="outputs">
+    </div>
+    <div id="prompt">
+        <span id="prompt-username"></span> <input type="text" id="shell-input" />
     </div>
 </body>
 
