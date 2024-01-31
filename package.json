@@ -9,6 +9,7 @@
   "dependencies": {
     "@use-it/interval": "^1.0.0",
     "@vercel/analytics": "^1.0.2",
+    "@vercel/speed-insights": "^1.0.9",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "linkify-react": "^4.1.1",

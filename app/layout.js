@@ -1,5 +1,6 @@
 import '../styles/global.css';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Ubuntu_Mono } from 'next/font/google'
 
 const ubuntuMono = Ubuntu_Mono({ 
@@ -29,6 +30,7 @@ export default function RootLayout({
                 {children}
             </main>
             <Analytics />
+            <SpeedInsights />
         </body>
         {/* Site inspired from https://www.babbev.com/ */}
       </html>
