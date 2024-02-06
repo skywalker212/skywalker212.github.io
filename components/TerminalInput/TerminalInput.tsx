@@ -1,10 +1,11 @@
 import classNames from 'classnames';
 import Character from '../Character/Character';
 import styles from './TerminalInput.module.css';
+import {USER, HOST} from '../../helpers/consts';
 
 export default function TerminalInput({ 
-        user, 
-        host, 
+        user = USER, 
+        host = HOST, 
         currentLine,
         isCursorActive = true,
         hideSystemInfo = false,
@@ -44,7 +45,7 @@ export default function TerminalInput({
             ))}
 
             { isCursorActive && <div className={blinkerClasses}></div> }
-            { isCursorActive && writable && <textarea className={styles.hiddenTextArea} autoCapitalize='off' spellCheck='false' /> }
+            { isCursorActive && writable && <textarea className={styles.hiddenTextArea} autoCapitalize='none' spellCheck='false' /> }
         </div>
     )
 }

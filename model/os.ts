@@ -7,6 +7,10 @@ import {
 } from '../helpers/os-data';
 
 class AkaSH {
+    borderlessTable: any;
+    projectsTable: any;
+    textParagraphTable: any;
+
     constructor() {
         this.borderlessTable = {
             border: getBorderCharacters('void'),
@@ -48,8 +52,7 @@ class AkaSH {
             ['about', 'short about me, experience, cv'],
             ['projects', 'projects I have worked on'],
             ['contact', 'contact information'],
-            ['social', 'social media links'],
-            ['matrix', 'boot the matrix'],
+            ['social', 'social media links']
         ],
         this.borderlessTable,
     );
@@ -86,7 +89,7 @@ class AkaSH {
 
     aboutMeText = () => table([[ABOUT_TEXT]], this.textParagraphTable) 
 
-    about = () => `${this.aboutMeText()}\n\nExperience:\n${this.experience()}\n\nTechnologies:\n${this.techExp()}`;
+    about = () => `${this.aboutMeText()}\n\nExperience:\n${this.experience()}\n\nTechnologies:\n${this.techExp()}\n\nMy resume: https://uflorida-my.sharepoint.com/:b:/g/personal/agajjar_ufl_edu/EeVzpTskByBPsuUwvaz47wMBtkiv7bEhXMomgg4P6vgKvw?e=MORKxI`;
 
     projectsHelpTable = () => table([], this.borderlessTable);
 
@@ -108,8 +111,6 @@ ${this.projectsHelpTable()}`;
     
     social = () => table(SOCIAL, this.borderlessTable);
     
-    matrix = () => 'booting the matrix...';
-
     /**
      * Execute command
      * @param {string[]} command
@@ -132,8 +133,6 @@ ${this.projectsHelpTable()}`;
                 return this.contact();
             case 'social':
                 return this.social();
-            case 'matrix':
-                return this.matrix();
             default:
                 return this.notFound(arg1);
         }

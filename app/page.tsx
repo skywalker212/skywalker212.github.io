@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import Terminal from '../components/Terminal/Terminal';
 import IntroAnimation from '../components/IntroAnimation/IntroAnimation';
-import { INTRO_TEXT } from '../helpers/consts';
+import { INTRO_TEXT, USER, HOST } from '../helpers/consts';
 
 import AkaSH from '../model/os';
 
@@ -30,9 +30,9 @@ export default function Page() {
         { displayIntroAnimation && <IntroAnimation fadeOutAfter={beginFadeOutAfter} /> }
         { !displayIntroAnimation &&  
           <Terminal
-            height='80vh'
-            user='fullmetal'
-            host='skywalker'
+            height='100vh'
+            user={USER}
+            host={HOST}
             commandHandler={commandHandler}
             introText={INTRO_TEXT} />
           }
