@@ -29,6 +29,12 @@ export default function Terminal({
       messagesEndRef.current.scrollIntoView({ block: 'nearest', inline: 'start' });
     };
 
+    const clearOutput = () => {
+      setInputHistory([[]]);
+      setOutputHistory([[]]);
+      return;
+    }
+
     useEffect(() => {
       /**
        * @param {string[]} command
@@ -37,9 +43,7 @@ export default function Terminal({
       const handleCommand = async (command) => {
         const [arg1] = command;
         if (arg1 === "clear") {
-          setInputHistory([[]]);
-          setOutputHistory([[]]);
-          return;
+          clearOutput();
         }
 
         const res = await commandHandler(command);
@@ -66,7 +70,7 @@ export default function Terminal({
         }
       };
 
-      const keyDownHandler = (event) => {
+      const keyDownHandler = (event: KeyboardEvent) => {
         event.preventDefault();
 
         if (!isMatrixRain) {
@@ -80,6 +84,11 @@ export default function Terminal({
           if (event.key === "Backspace") {
             // Delete character
             currentLine = currentLine.slice(0, -1);
+          } else if (
+            event.ctrlKey &&
+            event.key === "l"
+          ) {
+            clearOutput();
           } else if (
             event.key === "Enter" ||
             event.key === "\n" ||

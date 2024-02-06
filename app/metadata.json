@@ -1,0 +1,11 @@
+{
+    "icons": {
+      "icon": "/favicon.ico"
+    },
+    "title": "Aka.sh",
+    "description": "Gateway to Akash Gajjar",
+    "openGraph": {
+      "title": "Aka.sh",
+      "description": "Gateway to Akash Gajjar"
+    }
+}
