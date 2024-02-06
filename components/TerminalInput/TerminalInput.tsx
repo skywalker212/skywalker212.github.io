@@ -45,7 +45,7 @@ export default function TerminalInput({
             ))}
 
             { isCursorActive && <div className={blinkerClasses}></div> }
-            { isCursorActive && writable && <textarea className={styles.hiddenTextArea} spellCheck='false' /> }
+            { isCursorActive && writable && <textarea className={styles.hiddenTextArea} autoCapitalize='none' spellCheck='false' /> }
         </div>
     )
 }
