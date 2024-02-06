@@ -13,6 +13,7 @@ export const INTERNSHIP_SHORT_CV = [
 
 export const PROJECTS = [
     ['Name', 'Technologies', 'Link'],
+    ['Infosys Equinox Studio', 'Node.js', 'https://www.infosysequinox.com/offerings/infosys-equinox-studio.html'],
     ['Tweeter', 'Erlang', 'https://github.com/skywalker212/tweeter'],
     ['Shadowfax', 'Java', 'https://github.com/skywalker212/shadowfax'],
     ['HPA Classification', 'Python', 'https://github.com/skywalker212/hpa-classification'],
