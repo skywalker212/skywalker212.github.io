@@ -2,8 +2,10 @@ import { table, getBorderCharacters } from 'table';
 import {
     ABOUT_TEXT,
     EXPERIENCE_SHORT_CV,
+    INTERNSHIP_SHORT_CV,
     SOCIAL,
     CONTACT,
+    PROJECTS,
 } from '../helpers/os-data';
 
 class AkaSH {
@@ -57,47 +59,19 @@ class AkaSH {
         this.borderlessTable,
     );
     
-    techExp = () => {
-        const year = new Date().getFullYear();
-        const linux = 2016;
-        const js = 2016;
-        const python = 2018;
-        const docker = 2019;
-        const react = 2018;
-        const c = 2016;
-
-        const expStr = (y) => `${y}+`;
-
-        const data = [
-            ['Technology', 'Years of experience'],
-            ['Linux', expStr(year - linux)],
-            ['JavaScript / Ts', expStr(year - js)],
-            ['Python', expStr(year - python)],
-            ['Docker / Swarm / k8s', expStr(year - docker)],
-            ['React', expStr(year - react)],
-            ['C', expStr(year - c)],
-        ];
-
-        return table(data, {
-            border: getBorderCharacters('ramac'),
-        });
-    }
-
-    experience = () => table(EXPERIENCE_SHORT_CV, {
+    experience = (experienceTable) => table(experienceTable, {
             border: getBorderCharacters('ramac'),
     });
 
     aboutMeText = () => table([[ABOUT_TEXT]], this.textParagraphTable) 
 
-    about = () => `${this.aboutMeText()}\n\nExperience:\n${this.experience()}\n\nTechnologies:\n${this.techExp()}\n\nMy resume: https://uflorida-my.sharepoint.com/:b:/g/personal/agajjar_ufl_edu/EeVzpTskByBPsuUwvaz47wMBtkiv7bEhXMomgg4P6vgKvw?e=MORKxI`;
+    about = () => `${this.aboutMeText()}\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}\n\nMy resume: https://uflorida-my.sharepoint.com/:b:/g/personal/agajjar_ufl_edu/EeVzpTskByBPsuUwvaz47wMBtkiv7bEhXMomgg4P6vgKvw?e=MORKxI`;
 
-    projectsHelpTable = () => table([], this.borderlessTable);
+    projectsHelpTable = () => table(PROJECTS, {
+        border: getBorderCharacters('ramac')
+    });
 
-    projectsHelp = () => `Usage: projects <SUBCOMMAND>
-A list of projects and deliverables I have worked on at each company.
-
-SUBCOMMANDS:
-${this.projectsHelpTable()}`;
+    projectsHelp = () => this.projectsHelpTable();
 
     projects = (args) => {
         const [_, company] = args;
