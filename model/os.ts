@@ -52,8 +52,7 @@ class AkaSH {
             ['about', 'short about me, experience, cv'],
             ['projects', 'projects I have worked on'],
             ['contact', 'contact information'],
-            ['social', 'social media links'],
-            ['matrix', 'boot the matrix'],
+            ['social', 'social media links']
         ],
         this.borderlessTable,
     );
@@ -112,8 +111,6 @@ ${this.projectsHelpTable()}`;
     
     social = () => table(SOCIAL, this.borderlessTable);
     
-    matrix = () => 'booting the matrix...';
-
     /**
      * Execute command
      * @param {string[]} command
@@ -136,8 +133,6 @@ ${this.projectsHelpTable()}`;
                 return this.contact();
             case 'social':
                 return this.social();
-            case 'matrix':
-                return this.matrix();
             default:
                 return this.notFound(arg1);
         }

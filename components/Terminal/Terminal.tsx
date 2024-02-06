@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import MatrixRain from '../MatrixRain/MatrixRain';
 import Linkify from "linkify-react";
 import TerminalInput from '../TerminalInput/TerminalInput';
 import styles from './Terminal.module.css';
@@ -23,7 +22,6 @@ export default function Terminal({
     const [inputHistory, setInputHistory] = useState([[]]);
     const [outputHistory, setOutputHistory] = useState([ introText ]);
     const messagesEndRef = useRef(null);
-    const [isMatrixRain, setIsMatrixRain] = useState(false);
 
     const scrollToBottom = () => {
       messagesEndRef.current.scrollIntoView({ block: 'nearest', inline: 'start' });
@@ -65,17 +63,10 @@ export default function Terminal({
           });
         }
 
-        if (command.length === 1 && command[0] === 'matrix') {
-          setTimeout(() => setIsMatrixRain(true), 250);
-        }
       };
 
       const keyDownHandler = (event: KeyboardEvent) => {
         event.preventDefault();
-
-        if (!isMatrixRain) {
-          scrollToBottom();
-        }
 
         // Hande the key down events
         setInputHistory((prevLines) => {
@@ -86,7 +77,7 @@ export default function Terminal({
             currentLine = currentLine.slice(0, -1);
           } else if (
             event.ctrlKey &&
-            event.key === "l"
+            event.key.toLowerCase() === "l"
           ) {
             clearOutput();
           } else if (
@@ -122,9 +113,6 @@ export default function Terminal({
                 browseIndex: prevHistory.history.length,
               }));
             }
-          } else if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'c') {
-              // Stop the matrix
-              setIsMatrixRain(false);
           } else if (event.key.length === 1) {
             // Add character to current line
             // On non ascii-keys even.key is multiple characters long
@@ -142,7 +130,7 @@ export default function Terminal({
       return () => {
         document.removeEventListener("keydown", keyDownHandler);
       };
-    }, [commandHandler, inputExecutedCmdHistory, isMatrixRain]);
+    }, [commandHandler, inputExecutedCmdHistory]);
 
     useEffect(() => {
       scrollToBottom();
@@ -150,30 +138,27 @@ export default function Terminal({
 
     return (
         <div>
-          { isMatrixRain && <MatrixRain /> }
-          { !isMatrixRain && 
-            <div className={styles.container} style={{ height: height }}>
-                {inputHistory.map((line, index) => (
-                  <div key={index} >
-                    <div className={styles.outputText}>
-                      {outputHistory[index] && outputHistory[index].map((output, indexMsg) => (
-                        <div key={indexMsg} className={styles.outputLine}>
-                          <Linkify as="p" options={{target: '_blank'}}>{output}</Linkify>
-                        </div>
-                      ))}
-                    </div>
-                    <TerminalInput 
-                      user={user} 
-                      host={host} 
-                      currentLine={line} 
-                      isCursorActive={index === inputHistory.length - 1} />
+          <div className={styles.container} style={{ height: height }}>
+              {inputHistory.map((line, index) => (
+                <div key={index} >
+                  <div className={styles.outputText}>
+                    {outputHistory[index] && outputHistory[index].map((output, indexMsg) => (
+                      <div key={indexMsg} className={styles.outputLine}>
+                        <Linkify as="p" options={{target: '_blank'}}>{output}</Linkify>
+                      </div>
+                    ))}
                   </div>
-                ))}
-
-                <div ref={messagesEndRef}> 
+                  <TerminalInput 
+                    user={user} 
+                    host={host} 
+                    currentLine={line} 
+                    isCursorActive={index === inputHistory.length - 1} />
                 </div>
-            </div>
-          }
+              ))}
+
+              <div ref={messagesEndRef}> 
+              </div>
+          </div>
         </div>
     )
 }
