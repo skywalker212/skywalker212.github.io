@@ -1,6 +1,6 @@
 import { table, getBorderCharacters } from 'table';
 import {
-    ABOUT_TEXT,
+    WHOAMI_TEXT,
     EXPERIENCE_SHORT_CV,
     INTERNSHIP_SHORT_CV,
     SOCIAL,
@@ -47,11 +47,11 @@ class AkaSH {
     
     help = () => table(
         [
-            ['aka.sh', ''],
+            ['akash.is', ''],
             ['', ''],
             ['Usage:', ''],
             ['help', 'this message or help for a specific command'],
-            ['about', 'short about me, experience, cv'],
+            ['whoami', 'short about me, experience, cv'],
             ['projects', 'projects I have worked on'],
             ['contact', 'contact information'],
             ['social', 'social media links']
@@ -63,9 +63,9 @@ class AkaSH {
             border: getBorderCharacters('ramac'),
     });
 
-    aboutMeText = () => table([[ABOUT_TEXT]], this.textParagraphTable) 
+    whoAmIText = () => table([[WHOAMI_TEXT]], this.textParagraphTable) 
 
-    about = () => `${this.aboutMeText()}\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}\n\nMy resume: https://uflorida-my.sharepoint.com/:b:/g/personal/agajjar_ufl_edu/EeVzpTskByBPsuUwvaz47wMBtkiv7bEhXMomgg4P6vgKvw?e=MORKxI`;
+    whoami = () => `${this.whoAmIText()}\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}\n\nMy resume: https://uflorida-my.sharepoint.com/:b:/g/personal/agajjar_ufl_edu/EeVzpTskByBPsuUwvaz47wMBtkiv7bEhXMomgg4P6vgKvw?e=MORKxI`;
 
     projectsHelpTable = () => table(PROJECTS, {
         border: getBorderCharacters('ramac')
@@ -99,8 +99,8 @@ class AkaSH {
         switch (arg1) {
             case 'help':
                 return this.help();
-            case 'about':
-                return this.about();
+            case 'whoami':
+                return this.whoami();
             case 'projects':
                 return this.projects(command);
             case 'contact':
