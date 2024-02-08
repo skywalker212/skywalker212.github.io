@@ -1,4 +1,5 @@
 import { table, getBorderCharacters } from 'table';
+import * as cowsay from 'cowsay';
 import {
     WHOAMI_TEXT,
     EXPERIENCE_SHORT_CV,
@@ -54,7 +55,8 @@ class AkaSH {
             ['whoami', 'short about me, experience, cv'],
             ['projects', 'projects I have worked on'],
             ['contact', 'contact information'],
-            ['social', 'social media links']
+            ['social', 'social media links'],
+            ['cowsay [say]', 'a talking cow']
         ],
         this.borderlessTable,
     );
@@ -65,7 +67,7 @@ class AkaSH {
 
     whoAmIText = () => table([[WHOAMI_TEXT]], this.textParagraphTable) 
 
-    whoami = () => `${this.whoAmIText()}\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}\n\nMy resume: https://uflorida-my.sharepoint.com/:b:/g/personal/agajjar_ufl_edu/EeVzpTskByBPsuUwvaz47wMBtkiv7bEhXMomgg4P6vgKvw?e=MORKxI`;
+    whoami = () => `${this.whoAmIText()}\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}`;
 
     projectsHelpTable = () => table(PROJECTS, {
         border: getBorderCharacters('ramac')
@@ -79,6 +81,11 @@ class AkaSH {
             default:
                 return this.projectsHelp();
         }
+    }
+    
+    cowsay = (args) => {
+        const [_, ...textArr] = args;
+        return cowsay.say({text: textArr.join(' ')});
     }
     
     contact = () => table(CONTACT, this.borderlessTable);
@@ -101,6 +108,8 @@ class AkaSH {
                 return this.help();
             case 'whoami':
                 return this.whoami();
+            case 'cowsay':
+                return this.cowsay(command);
             case 'projects':
                 return this.projects(command);
             case 'contact':
