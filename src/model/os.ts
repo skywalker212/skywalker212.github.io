@@ -67,7 +67,7 @@ class AkaSH {
 
     whoAmIText = () => table([[WHOAMI_TEXT]], this.textParagraphTable) 
 
-    whoami = () => `${this.whoAmIText()}\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}`;
+    whoami = () => `${this.whoAmIText()}\n\nMy Resume: ${window.location.origin}/resume.pdf\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}`;
 
     projectsHelpTable = () => table(PROJECTS, {
         border: getBorderCharacters('ramac')
