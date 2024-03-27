@@ -1,12 +1,11 @@
 import '../styles/global.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Ubuntu_Mono } from 'next/font/google'
+import { Inconsolata } from 'next/font/google'
 // import metadata from './metadata.json';
 
-const ubuntuMono = Ubuntu_Mono({ 
-    subsets: ['latin'],
-    weight: '400',
+const inconsolata = Inconsolata({ 
+    subsets: ['latin']
 });
 
 export default function RootLayout({
@@ -15,7 +14,7 @@ export default function RootLayout({
     return (
       <html lang="en">
         <body>
-            <main className={ubuntuMono.className}>
+            <main className={inconsolata.className}>
                 {children}
             </main>
             <Analytics />
