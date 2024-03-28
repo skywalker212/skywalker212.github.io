@@ -52,7 +52,8 @@ class AkaSH {
             ['', ''],
             ['Usage:', ''],
             ['help', 'this message or help for a specific command'],
-            ['whoami', 'short about me, experience, cv'],
+            ['whoami', 'short about me, experience'],
+            ['resume', 'my resume'],
             ['projects', 'projects I have worked on'],
             ['contact', 'contact information'],
             ['social', 'social media links'],
@@ -69,6 +70,8 @@ class AkaSH {
 
     whoami = () => `${this.whoAmIText()}\n\nMy Resume: ${window.location.origin}/resume.pdf\n\nExperience:\n${this.experience(EXPERIENCE_SHORT_CV)}\n\nInternships:\n${this.experience(INTERNSHIP_SHORT_CV)}`;
 
+    resume = () => `${window.location.origin}/resume.pdf`;
+    
     projectsHelpTable = () => table(PROJECTS, {
         border: getBorderCharacters('ramac')
     });
@@ -106,6 +109,8 @@ class AkaSH {
         switch (arg1) {
             case 'help':
                 return this.help();
+            case 'resume':
+                return this.resume();
             case 'whoami':
                 return this.whoami();
             case 'cowsay':
