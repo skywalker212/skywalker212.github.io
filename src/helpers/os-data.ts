@@ -19,7 +19,6 @@ export const PROJECTS = [
     ['HPA Classification', 'Python', 'https://github.com/skywalker212/hpa-classification'],
     ['Tiny Shell', 'C', 'https://github.com/skywalker212/tiny-shell'],
     ['fitopsY', 'Python', 'https://github.com/skywalker212/fitopsY'],
-    ['Portfolio', 'TypeScript', 'https://github.com/skywalker212/skywalker212.github.io'],
     ['More', 'at', 'https://github.com/skywalker212']
 ];
 
