@@ -28,5 +28,5 @@ export const SOCIAL = [
 ];
 
 export const CONTACT = [
-    ['Email', 'akashgajjar8@gmail.com']
+    ['Email', 'me@akash.is']
 ];
